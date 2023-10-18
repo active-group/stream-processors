@@ -15,7 +15,7 @@
    (instance? Put sp2)
    (Put. (:value sp2) (fn [] (>>> sp1 ((:next sp2)))))
    ;; get >>> get
-   (and (instance? Get sp1) (instance? Get sp1))
+   (and (instance? Get sp1) (instance? Get sp2))
    (Get. (fn [i] (>>> ((:consume sp1) i) sp2)))
    ;; stop >>> sp2
    (instance? Stop sp1) sp2
